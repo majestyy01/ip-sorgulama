@@ -103,7 +103,7 @@ class IPKonumTakipUygulamasi:
     def haritayi_goster(self, enlem, boylam, harita_dosya_adi):
         # Haritayı oluştur ve göster
         harita = folium.Map(location=[enlem, boylam], zoom_start=12)
-        folium.Marker(location=[enlem, boylam], popup='IP Konumu', icon=folium.Icon(color='red')).add_to(harita)
+        folium.Marker(location=[enlem, boylam], popup='Bulunan Konum -  WoxicDEV', icon=folium.Icon(color='red')).add_to(harita)
         harita.save(harita_dosya_adi)
         messagebox.showinfo('Harita Gösterildi', f'Harita "{harita_dosya_adi}" adlı dosyaya kaydedildi.')
         webbrowser.open(harita_dosya_adi, new=2)  # Haritayı tarayıcıda aç(varsayılan)
